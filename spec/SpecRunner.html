@@ -25,8 +25,16 @@
 <body>
 
 <script type="text/javascript">
-  jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
-  jasmine.getEnv().execute();
+	var jasmineEnv = jasmine.getEnv();    
+	var styledReporter = new jasmine.reporting.StyledHtmlReporter();    
+	
+	jasmineEnv.addReporter(styledReporter);    
+	
+	jasmineEnv.specFilter = function(spec) {
+		return styledReporter.specFilter(spec);    
+	};
+	
+	jasmine.getEnv().execute();
 </script>
 
 </body>
