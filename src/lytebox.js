@@ -174,6 +174,7 @@ LyteBox.prototype.initialize = function() {
     objPlay.style.display = 'none';
     objBottomNav.appendChild(objPlay);
 };
+
 LyteBox.prototype.updateLyteboxItems = function() {	
 	var anchors = (this.isFrame) ? window.parent.frames[window.name].document.getElementsByTagName('a') : document.getElementsByTagName('a');
 	for (var i = 0; i < anchors.length; i++) {
@@ -190,6 +191,7 @@ LyteBox.prototype.updateLyteboxItems = function() {
 		}
 	}
 };
+
 LyteBox.prototype.start = function(imageLink, doSlide, doFrame) {
 	if (this.ie && !this.ie7) {	this.toggleSelects('hide');	}
 	if (this.hideFlash) { this.toggleFlash('hide'); }

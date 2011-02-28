@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Lytebox Tests</title>
+  
+  <!--Jasmine-->
+  <link rel="stylesheet" type="text/css" href="lib/jasmine/jasmine.css">
+  <script type="text/javascript" src="lib/jasmine/jasmine.js"></script>
+  <script type="text/javascript" src="lib/jasmine/jasmine-html.js"></script>
+
+  <!--Jasmine Species-->
+  <link rel="stylesheet" type="text/css" href="lib/jasmine-species/calm.css">
+  <script type="text/javascript" src="lib/jasmine-species/jasmine-grammar.js"></script>
+  <script type="text/javascript" src="lib/jasmine-species/jasmine-reporting.js"></script>
+  
+  <!-- include source files here... -->
+  <link rel="stylesheet" type="text/css" href="../src/lytebox.css">
+  <script type="text/javascript" src="../src/lytebox.js"></script>
+
+  <!-- include spec files here... -->
+  <script type="text/javascript" src="Setup.Spec.js"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+  jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+  jasmine.getEnv().execute();
+</script>
+
+</body>
+</html>
